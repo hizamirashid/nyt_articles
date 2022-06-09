@@ -37,7 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028.985507246377" y="107.8125"/>
+            <point key="canvasLocation" x="946" y="108"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bc2-Q8-3BA">
@@ -86,10 +86,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mP9-RC-EuP" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1781" y="108"/>
+            <point key="canvasLocation" x="1726" y="108"/>
+        </scene>
+        <!--Search Controller-->
+        <scene sceneID="q2q-EF-EfD">
+            <objects>
+                <viewController storyboardIdentifier="SearchController" id="Hbm-P0-KZp" customClass="SearchController" customModule="SICPA_Articles_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MRR-Qu-lSY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search articles here ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jSN-7e-qKs">
+                                <rect key="frame" x="16" y="84" width="382" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cGJ-Ey-eG3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imo-wY-8QJ">
+                                <rect key="frame" x="162" y="144" width="90" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7T4-2a-C1c"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="magnifyingglass" catalog="system" title="Search"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8pN-pD-Ve5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8pN-pD-Ve5" firstAttribute="trailing" secondItem="jSN-7e-qKs" secondAttribute="trailing" constant="16" id="9MA-yR-oD0"/>
+                            <constraint firstItem="jSN-7e-qKs" firstAttribute="top" secondItem="8pN-pD-Ve5" secondAttribute="top" constant="40" id="BsT-er-juq"/>
+                            <constraint firstItem="Imo-wY-8QJ" firstAttribute="centerX" secondItem="MRR-Qu-lSY" secondAttribute="centerX" id="YNU-x5-DFI"/>
+                            <constraint firstItem="jSN-7e-qKs" firstAttribute="leading" secondItem="8pN-pD-Ve5" secondAttribute="leading" constant="16" id="tAO-D9-HIf"/>
+                            <constraint firstItem="Imo-wY-8QJ" firstAttribute="top" secondItem="jSN-7e-qKs" secondAttribute="bottom" constant="20" id="xxN-Tz-sM6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBtn" destination="Imo-wY-8QJ" id="cfa-7P-Qxc"/>
+                        <outlet property="searchTF" destination="jSN-7e-qKs" id="Vsu-0K-FLr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n2B-Ry-vKY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2470" y="108"/>
         </scene>
     </scenes>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

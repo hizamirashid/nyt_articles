@@ -40,6 +40,8 @@ class LandingController: UIViewController {
     
     @objc private func searchHandler() {
         
+        let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SearchController") as! SearchController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
