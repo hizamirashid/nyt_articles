@@ -22,7 +22,18 @@
 		CE33C6C02852656E00003D04 /* SearchedArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33C6BF2852656E00003D04 /* SearchedArticles.swift */; };
 		CE33C6C22852D37900003D04 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33C6C12852D37900003D04 /* ArticleViewModel.swift */; };
 		CE33C6C42852D62D00003D04 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33C6C32852D62D00003D04 /* ArticleCell.swift */; };
+		CE33C6CE2852DACF00003D04 /* SICPA_Articles_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33C6CD2852DACF00003D04 /* SICPA_Articles_AppTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE33C6CF2852DACF00003D04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE33C683285248DF00003D04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE33C68A285248DF00003D04;
+			remoteInfo = "SICPA Articles App";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CE33C68B285248DF00003D04 /* SICPA Articles App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SICPA Articles App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,10 +53,19 @@
 		CE33C6BF2852656E00003D04 /* SearchedArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedArticles.swift; sourceTree = "<group>"; };
 		CE33C6C12852D37900003D04 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		CE33C6C32852D62D00003D04 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		CE33C6CB2852DACF00003D04 /* SICPA Articles AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SICPA Articles AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE33C6CD2852DACF00003D04 /* SICPA_Articles_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SICPA_Articles_AppTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CE33C688285248DF00003D04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE33C6C82852DACF00003D04 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				CE33C68D285248DF00003D04 /* SICPA Articles App */,
+				CE33C6CC2852DACF00003D04 /* SICPA Articles AppTests */,
 				CE33C68C285248DF00003D04 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				CE33C68B285248DF00003D04 /* SICPA Articles App.app */,
+				CE33C6CB2852DACF00003D04 /* SICPA Articles AppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,6 +156,14 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		CE33C6CC2852DACF00003D04 /* SICPA Articles AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE33C6CD2852DACF00003D04 /* SICPA_Articles_AppTests.swift */,
+			);
+			path = "SICPA Articles AppTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,6 +184,24 @@
 			productReference = CE33C68B285248DF00003D04 /* SICPA Articles App.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CE33C6CA2852DACF00003D04 /* SICPA Articles AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE33C6D12852DACF00003D04 /* Build configuration list for PBXNativeTarget "SICPA Articles AppTests" */;
+			buildPhases = (
+				CE33C6C72852DACF00003D04 /* Sources */,
+				CE33C6C82852DACF00003D04 /* Frameworks */,
+				CE33C6C92852DACF00003D04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE33C6D02852DACF00003D04 /* PBXTargetDependency */,
+			);
+			name = "SICPA Articles AppTests";
+			productName = "SICPA Articles AppTests";
+			productReference = CE33C6CB2852DACF00003D04 /* SICPA Articles AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -166,6 +214,10 @@
 				TargetAttributes = {
 					CE33C68A285248DF00003D04 = {
 						CreatedOnToolsVersion = 13.1;
+					};
+					CE33C6CA2852DACF00003D04 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = CE33C68A285248DF00003D04;
 					};
 				};
 			};
@@ -183,6 +235,7 @@
 			projectRoot = "";
 			targets = (
 				CE33C68A285248DF00003D04 /* SICPA Articles App */,
+				CE33C6CA2852DACF00003D04 /* SICPA Articles AppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -195,6 +248,13 @@
 				CE33C69B285248E200003D04 /* LaunchScreen.storyboard in Resources */,
 				CE33C698285248E200003D04 /* Assets.xcassets in Resources */,
 				CE33C696285248DF00003D04 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE33C6C92852DACF00003D04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +280,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE33C6C72852DACF00003D04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE33C6CE2852DACF00003D04 /* SICPA_Articles_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE33C6D02852DACF00003D04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE33C68A285248DF00003D04 /* SICPA Articles App */;
+			targetProxy = CE33C6CF2852DACF00003D04 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CE33C694285248DF00003D04 /* Main.storyboard */ = {
@@ -414,6 +490,52 @@
 			};
 			name = Release;
 		};
+		CE33C6D22852DACF00003D04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ACWR8XJ6VT;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hizamirashid.SICPA-Articles-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SICPA Articles App.app/SICPA Articles App";
+			};
+			name = Debug;
+		};
+		CE33C6D32852DACF00003D04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ACWR8XJ6VT;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hizamirashid.SICPA-Articles-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SICPA Articles App.app/SICPA Articles App";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -431,6 +553,15 @@
 			buildConfigurations = (
 				CE33C6A0285248E200003D04 /* Debug */,
 				CE33C6A1285248E200003D04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE33C6D12852DACF00003D04 /* Build configuration list for PBXNativeTarget "SICPA Articles AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE33C6D22852DACF00003D04 /* Debug */,
+				CE33C6D32852DACF00003D04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
