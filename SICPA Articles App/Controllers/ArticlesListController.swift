@@ -56,7 +56,7 @@ class ArticlesListController: UIViewController {
             switch result {
             case .success(let articlesResult):
                 DispatchQueue.main.async {
-                    if let articles = articlesResult.articles {
+                    if let articles = articlesResult.results {
                         self?.articleViewModels = articles.map({ return ArticleViewModel(article: $0) })
                         self?.tableView.reloadData()
                     }

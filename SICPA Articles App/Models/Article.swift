@@ -11,7 +11,7 @@ struct ArticlesResult : Codable {
     let status : String?
     let copyright : String?
     let num_results : Int?
-    let articles : [Article]?
+    let results : [Article]?
 }
 
 struct Article: Codable {
