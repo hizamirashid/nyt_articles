@@ -13,8 +13,8 @@ class ArticlesListController: UIViewController {
     
     var popularType: PopularType = .mostViewed
     var url: URL?
-    var articles: [Article] = []
-    var searchedArticles: [Docs] = []
+    var articleViewModels: [ArticleViewModel] = []
+    var searchedViewModels: [ArticleViewModel] = []
     var isSearch: Bool = false
     var searchText = ""
     
@@ -31,7 +31,7 @@ class ArticlesListController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
+        tableView.register(ArticleCell.self, forCellReuseIdentifier: "TableViewCell")
     }
     
     private func configureNavigationBar() {
@@ -57,7 +57,7 @@ class ArticlesListController: UIViewController {
             case .success(let articlesResult):
                 DispatchQueue.main.async {
                     if let articles = articlesResult.articles {
-                        self?.articles = articles
+                        self?.articleViewModels = articles.map({ return ArticleViewModel(article: $0) })
                         self?.tableView.reloadData()
                     }
                 }
@@ -75,7 +75,7 @@ class ArticlesListController: UIViewController {
             case .success(let searchedArticlesResult):
                 DispatchQueue.main.async {
                     if let response = searchedArticlesResult.response, let docs = response.docs {
-                        self?.searchedArticles = docs
+                        self?.searchedViewModels = docs.map({ return ArticleViewModel(doc: $0) })
                         self?.tableView.reloadData()
                     }
                 }
@@ -90,18 +90,18 @@ class ArticlesListController: UIViewController {
 extension ArticlesListController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return isSearch ? searchedArticles.count : articles.count
+        return isSearch ? searchedViewModels.count : articleViewModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "TableViewCell")
-        cell.textLabel?.text = isSearch ? searchedArticles[indexPath.row].abstract : articles[indexPath.row].title
-        cell.detailTextLabel?.text = isSearch ? searchedArticles[indexPath.row].pub_date : articles[indexPath.row].published_date
+        let cell = ArticleCell(style: .subtitle, reuseIdentifier: "TableViewCell")
+        let articleViewModel = isSearch ? searchedViewModels[indexPath.row] : articleViewModels[indexPath.row]
+        cell.articleViewModel = articleViewModel
         return cell
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        if (searchedArticles.isEmpty && isSearch) || (articles.isEmpty && !isSearch) {
+        if (searchedViewModels.isEmpty && isSearch) || (articleViewModels.isEmpty && !isSearch) {
             let spinner = UIActivityIndicatorView(style: .medium)
             spinner.startAnimating()
             spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))

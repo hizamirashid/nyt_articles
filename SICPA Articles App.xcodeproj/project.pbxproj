@@ -20,6 +20,8 @@
 		CE33C6B42852525400003D04 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33C6B32852525400003D04 /* Article.swift */; };
 		CE33C6BE28525E7A00003D04 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33C6BD28525E7A00003D04 /* SearchController.swift */; };
 		CE33C6C02852656E00003D04 /* SearchedArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33C6BF2852656E00003D04 /* SearchedArticles.swift */; };
+		CE33C6C22852D37900003D04 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33C6C12852D37900003D04 /* ArticleViewModel.swift */; };
+		CE33C6C42852D62D00003D04 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33C6C32852D62D00003D04 /* ArticleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		CE33C6B32852525400003D04 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		CE33C6BD28525E7A00003D04 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		CE33C6BF2852656E00003D04 /* SearchedArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedArticles.swift; sourceTree = "<group>"; };
+		CE33C6C12852D37900003D04 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		CE33C6C32852D62D00003D04 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		CE33C6A32852490000003D04 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE33C6C32852D62D00003D04 /* ArticleCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 		CE33C6A62852493600003D04 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CE33C6C12852D37900003D04 /* ArticleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -206,6 +212,8 @@
 				CE33C6B42852525400003D04 /* Article.swift in Sources */,
 				CE33C6B22852513400003D04 /* ArticlesListController.swift in Sources */,
 				CE33C6BE28525E7A00003D04 /* SearchController.swift in Sources */,
+				CE33C6C22852D37900003D04 /* ArticleViewModel.swift in Sources */,
+				CE33C6C42852D62D00003D04 /* ArticleCell.swift in Sources */,
 				CE33C691285248DF00003D04 /* SceneDelegate.swift in Sources */,
 				CE33C6A9285249D900003D04 /* LandingController.swift in Sources */,
 				CE33C6C02852656E00003D04 /* SearchedArticles.swift in Sources */,
